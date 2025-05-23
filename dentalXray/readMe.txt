@@ -1,6 +1,7 @@
 ##------------To start venv and install packages-----------------##
 cd backend
 python -m venv venv
+Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process #if required
 venv\Scripts\Activate.ps1   # On Windows
 source venv/bin/activate  # On macOS/Linux
 pip install -r requirements.txt
