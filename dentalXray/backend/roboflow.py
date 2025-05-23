@@ -1,8 +1,11 @@
 import requests
+import os
+from dotenv import load_dotenv
+import requests
 
-# Set your Roboflow credentials and model endpoint
-ROBOFLOW_API_KEY = "G8wF44TwnlYtwgQtUf9U"
-ROBOFLOW_MODEL_URL = "https://detect.roboflow.com/adr/6/1"
+load_dotenv()
+ROBOFLOW_API_KEY = os.getenv("ROBOFLOW_API_KEY")
+ROBOFLOW_MODEL_URL = "https://detect.roboflow.com/adr/6"
 
 def detect_pathologies(image_bytes):
     try:
