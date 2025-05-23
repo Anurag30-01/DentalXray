@@ -9,7 +9,6 @@ export default function App() {
   const [loading, setLoading] = useState(false);
   const [imageData, setImageData] = useState<string>("");
 
-// Removed top-level await call; imageData will be set in analyzeFile after receiving the response.
 
   const addLog = (message: string) => {
     setLogs((prev) => [...prev, message]);
