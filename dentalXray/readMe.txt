@@ -18,3 +18,12 @@ uvicorn main:app --reload
 cd frontend
 npm install
 npm run dev
+
+NOTE:- update frontend/src/App.tsx for using on localhost (by default it uses render server).
+
+#---------deployed frontend on vercelLink---------#
+https://dental-xray.vercel.app/
+
+#---------deployed backen on render---------#
+
+https://dentalxray.onrender.com/docs#/
