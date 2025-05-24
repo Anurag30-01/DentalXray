@@ -33,7 +33,9 @@ export default function App() {
       // Call backend API to analyze file & get detection results
       addLog("Uploading file for Roboflow analysis...");
       const roboflowResp = await axios.post(
-        "http://localhost:8000/roboflow-analyze",
+        // "http://localhost:8000/roboflow-analyze" //for localhost
+        "https://dentalxray.onrender.com/roboflow-analyze" //for render
+,
         formData,
         {
           headers: { "Content-Type": "multipart/form-data" },
@@ -49,7 +51,9 @@ export default function App() {
       setPredictions(roboflowPredictions);
       addLog(`Detected ${roboflowPredictions.length} findings.`);
       const reportResp = await axios.post(
-        "http://localhost:8000/gemini-report",
+        // "http://localhost:8000/gemini-report" //for localhost
+        "https://dentalxray.onrender.com/gemini-report"//for render
+,
         { predictions: roboflowPredictions }
       );
       setReport(reportResp.data.report);
