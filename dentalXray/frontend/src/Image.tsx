@@ -19,8 +19,6 @@ interface ImageWithBoxesProps {
 const ImageWithBoxes: React.FC<ImageWithBoxesProps> = ({
   imageBase64,
   predictions,
-  canvasWidth = 300,
-  canvasHeight = 300,
 }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
