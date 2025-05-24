@@ -66,6 +66,9 @@ class ReportRequest(BaseModel):
 @app.post("/gemini-report")
 async def gemini_report(request: ReportRequest):
     predictions = request.predictions
+    if not predictions:
+        return {"report": "No pathologies detected in the image."}
+    
     print(f"[INFO] Generating report for {len(predictions)} predictions")
 
     report_text = generate_gemini_report(predictions)

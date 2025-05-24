@@ -5,3 +5,10 @@ pillow
 python-multipart
 requests
 google-generativeai
+python-dotenv
+google-api-core
+protobuf
+numpy
+gdcm
+pylibjpeg
+pylibjpeg-libjpeg

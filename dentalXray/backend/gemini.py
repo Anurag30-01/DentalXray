@@ -23,7 +23,7 @@ Detections:
 Please write a brief paragraph highlighting:
 - Detected pathologies,
 - Their approximate location if possible (e.g., upper left molar),
-- Clinical advice or recommendations (optional)."""
+- Clinical advice or recommendations."""
     model = genai.GenerativeModel("gemini-2.0-flash")
     response = model.generate_content(prompt)
     return response.text.strip()
