@@ -79,7 +79,14 @@ export default function App() {
           <input
           type="file"
           accept=".dcm,image/*"
-          onChange={(e) => setFile(e.target.files ? e.target.files[0] : null)}
+          onChange={(e) => {
+                const selectedFile = e.target.files ? e.target.files[0] : null;
+                setFile(selectedFile);
+                setLogs([]);
+                setReport("");
+                setPredictions([]);
+                setImageData("");
+              }}
           className=" bg-gray-300 border border-black rounded pl-2 p-1 cursor-pointer w-[50%]"
         />
 
